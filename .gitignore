@@ -1,5 +1,5 @@
 **/node_modules
-design
+/design
 public
 package.json
 package-lock.json
