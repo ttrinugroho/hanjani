@@ -1,0 +1,93 @@
+{{ define "header"}}
+{{ partial "header-login.html" . }}
+{{end}}
+{{ define "main" }}
+<div style="--url-img: url(/img/mountain.png);" class="w-full min-h-screen bg-login relative">
+  <div class="w-full grids min-h-screen items-center justify-center">
+    <div class="item xs-12">
+      <div class="grids items-center justify-center">
+        <div class="item xs-12">
+          <div class="w-full mx-auto max-w-sm p-2">
+            <div class="text-center px-6 mb-8">
+              <h1 class="text-5xl mb-4 text-blue-400">
+                Login
+              </h1>
+              <p>Welcome to Hanjani Collection. Please fill the form to continue.</p>
+            </div>
+            <div class="mb-9">
+              <form action="">
+                <div class="mb-4">
+                  <label class="text-xs text-blue-400" for="email">Email</label>
+                  <input type="email" name="Email" id="email"
+                    class="focus:ring-blue-400 focus:border-blue-400 block w-full sm:text-sm border-gray-300 rounded-md"
+                    placeholder="Email">
+                </div>
+                <div class="mb-8">
+                  <label class="text-xs text-blue-400" for="password">Password</label>
+                  <div x-data="{ show: true }" class="mt-1 relative rounded-md">
+                    <input :type="show ? 'password' : 'text'" name="Password" placeholder="password" id="password"
+                      class="focus:ring-blue-400 focus:border-blue-400 block w-full pl-4 pr-12 sm:text-sm border-gray-300 rounded-md">
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <button type="button" @click="show = !show" class="flex text-gray-400 px-3 outline-none">
+                        <box-icon color="currentColor" :name="show ? 'hide':'show-alt'"></box-icon>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="text-gray-500 my-1 text-right text-sm">
+                    Forget password?
+                  </p>
+                </div>
+                <button type="submit"
+                  class="flex w-full justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Save
+                </button>
+              </form>
+            </div>
+            <div class="mb-8">
+              <p class="text-gray-500 text-sm text-center">or Login with</p>
+            </div>
+            <div class="text-center mb-12">
+              <button class="rounded-full overflow-hidden outline-none mx-5 inline-flex justify-center">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path
+                      d="M7.09187 19.338L5.978 23.4962L1.90681 23.5823C0.690125 21.3257 0 18.7437 0 16C0 13.3468 0.64525 10.8448 1.789 8.64172H1.78987L5.41437 9.30622L7.00212 12.909C6.66981 13.8778 6.48869 14.9178 6.48869 16C6.48881 17.1745 6.70156 18.2998 7.09187 19.338Z"
+                      fill="#FBBB00" />
+                    <path
+                      d="M31.7207 13.011C31.9045 13.9789 32.0003 14.9784 32.0003 16C32.0003 17.1455 31.8799 18.2629 31.6504 19.3407C30.8715 23.0084 28.8364 26.211 26.017 28.4774L26.0162 28.4765L21.4509 28.2435L20.8048 24.2101C22.6756 23.113 24.1375 21.396 24.9077 19.3407H16.3521V13.011H25.0325H31.7207Z"
+                      fill="#518EF8" />
+                    <path
+                      d="M26.0157 28.4765L26.0166 28.4774C23.2747 30.6813 19.7915 32 15.9999 32C9.90674 32 4.60918 28.5943 1.90674 23.5824L7.0918 19.3381C8.44299 22.9442 11.9217 25.5113 15.9999 25.5113C17.7529 25.5113 19.3951 25.0374 20.8043 24.2101L26.0157 28.4765Z"
+                      fill="#28B446" />
+                    <path
+                      d="M26.2128 3.6835L21.0295 7.927C19.5711 7.01537 17.8471 6.48875 16.0001 6.48875C11.8295 6.48875 8.28575 9.17356 7.00225 12.909L1.78994 8.64175H1.78906C4.45194 3.50769 9.81631 0 16.0001 0C19.8823 0 23.4418 1.38287 26.2128 3.6835Z"
+                      fill="#F14336" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="32" height="32" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+              <button class="rounded-full overflow-hidden outline-none mx-5 inline-flex justify-center">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z"
+                    fill="#3B5998" />
+                  <path
+                    d="M20.0225 16.6263H17.1675V27.0858H12.8419V16.6263H10.7847V12.9505H12.8419V10.5718C12.8419 8.87078 13.6499 6.20715 17.206 6.20715L20.4101 6.22056V9.7886H18.0853C17.704 9.7886 17.1678 9.97912 17.1678 10.7906V12.9539H20.4004L20.0225 16.6263Z"
+                    fill="white" />
+                </svg>
+              </button>
+            </div>
+            <p class="text-gray-500 text-sm text-center">Dont have an account? <a href="/register"
+                class="text-blue-400 font-bold">Register!</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{{ end }}

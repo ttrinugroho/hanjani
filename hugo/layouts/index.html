@@ -1,0 +1,138 @@
+{{ define "header" }}
+    {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div class="p-6 mt-9 mb-0.5">
+</div>
+<main class="w-full py-12">
+    <section id="slider" class="container-w-custom mb-10">
+        <div class="grids">
+            <div class="item xs-12 md-7">
+                <div style="background-color: #F6F6F6; height:352px;" class="w-full overflow-hidden">
+                    <div class="grids">
+                        <div class="item xs-6">
+                            <div class="flex justify-center">
+                                <img src="/img/slider-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="item xs-6">
+                            <div class="pr-16 pt-8 pl-11">
+                                <p class="mb-4 categorie">Outwear</p>
+                                <h3 class="mb-2 title">Jacket for Man</h3>
+                                <p class="mb-4 description">This jacket is perfect for keeping you company in winter! and also the ingredients used are very soft, making you feel confident every day.</p>
+                                <button class="flex-shrink-0 bg-blue-400 text-white text-base font-semibold py-2 px-4 shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                                    Buy Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item xs-12 md-5">
+                <div class="grids flex-col">
+                    <div class="item xs-12">
+                        <div class="py-6 px-8 bg-blue-200">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="categorie mb-4">Material</p>
+                                    <h3 class="title2 mb-2">Fabric Roll</h3>
+                                    <p class="description">Make your own shirt, etc</p>
+                                </div>
+                                <div style="min-height: 128px;" class="max-h-32 w-36 pr-7">
+                                    <img src="/img/image-2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item xs-12">
+                        <div class="py-6 px-8 bg-blue-300">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="categorie mb-4">T-Shirt</p>
+                                    <h3 class="title2 mb-2">SWhite</h3>
+                                    <p class="description">Comfort Shirt!</p>
+                                </div>
+                                <div style="min-height: 128px;" class="max-h-32 w-36 pr-7">
+                                    <img src="/img/image-1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="promotion" class="container-w-custom mb-10">
+        <div class="grids grids-6">
+            <div class="item xs-12 md-6">
+                <div style="--url-img:url(/img/man.png)" class="bg-img px-8 py-12">
+                    <div class="flex justify-between items-center">
+                        <h4 class="promo-text">Best Outfit <br> for Man</h4>
+                        <div>
+                            <button class="flex-shrink-0 border border-white text-white text-base font-semibold py-2 px-4 shadow-md hover:border-gray-500 focus:outline-none" type="button">
+                                Browse
+                              </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item xs-12 md-6">
+                <div style="--url-img:url(/img/women.png)" class="bg-img px-8 py-12">
+                    <div class="flex justify-between items-center">
+                        <h4 class="promo-text">Best Outfit <br> for Women</h4>
+                        <div>
+                            <button class="flex-shrink-0 border border-white text-white text-base font-semibold py-2 px-4 shadow-md hover:border-gray-500 focus:outline-none" type="button">
+                                Browse
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="list-product" class="container-w-custom mb-10">
+        <h3 class="title mb-8">Best Seller Items</h3>
+        <div class="grids justify-center grids-2">
+            <div class="item md-3">
+                {{ partial "product.html" (dict "img" "/img/product-1.png") }}
+            </div>
+            <div class="item md-3">
+                {{ partial "product.html" (dict "img" "/img/product-1.png") }}
+            </div>
+            <div class="item md-3">
+                {{ partial "product.html" (dict "img" "/img/product-1.png") }}
+            </div>
+            <div class="item md-3">
+                {{ partial "product.html" (dict "img" "/img/product-1.png") }}
+            </div>
+        </div>
+    </section>
+    <section id="banner-catalog" class="container-w-custom mb-10">
+        <div style="background-color: #F6F6F6;">
+            <div class="grids">
+                <div class="item md-7">
+                    <div class="px-20 py-16">
+                        <p class="mb-4 categorie">Outwear</p>
+                        <h3 class="mb-2 title">Jacket for Man</h3>
+                        <p class="mb-4 description">
+                            Sometimes, to look cool is really hard. There are many things that must be taken into account such as whether after it is suitable, the color is appropriate and pleasing to the eye, and so on. Relax, we will provide some of the trendiest casual visuals for you!
+                        </p>
+                        <button class="flex-shrink-0 text-blue-300 text-base font-semibold py-2 px-4 shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                <div class="item md-5">
+                    <div class="flex justify-center">
+                        <img src="/img/bottom-promosi.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{{ end }}
+{{ define "footer" }}
+    {{ partial "footer.html" . }}
+{{ end }}

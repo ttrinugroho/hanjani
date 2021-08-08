@@ -1,0 +1,23 @@
+baseURL = "http://example.org/"
+languageCode = "id-in"
+publishDir = "../public"
+title = "Hanjani"
+images = ["/uploads/2018/01/OGimage-01-3x.jpg"]
+pygmentsUseClasses = true
+enableRobotsTXT = true
+
+isPlainText = true
+
+[taxonomies]
+author = "authors"
+category = "categories"
+tag = "tags"
+
+[outputs]
+home = ["HTML", "RSS"]
+
+[params.cloudinary.lazysizes]
+enabled = true
+
+[markup.goldmark.renderer]
+unsafe= false

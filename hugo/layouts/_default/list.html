@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="page">
+  {{ range .Pages }}
+  <article class="markdown">
+    {{ partial "header-page.html" (dict "Data" (.) "List" "true" ) }}
+    <p>
+      {{ .Summary }}
+    </p>
+    {{ if .Truncated }}
+    <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+    <div>
+      <a class="btn btn-contained" href="{{ .RelPermalink }}">Read More »</a>
+    </div>
+    {{ end }}
+  </article>
+  {{ end }}
+</div>
+{{ end }}

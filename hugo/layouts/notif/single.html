@@ -1,0 +1,61 @@
+{{ define "header" }}
+    {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div class="p-6 mt-9 mb-0.5">
+</div>
+<main class="w-full py-12">
+    <div class="container-w-custom px-6">
+        <div class="flex mb-8 justify-between">
+            <h1 class="font-bold text-3xl">Notification</h1>
+            <div class="inline-flex justify-center">
+                <box-icon name='dots-horizontal-rounded' ></box-icon>
+            </div>
+        </div>
+        <p class="text-base font-bold mb-4">New</p>
+        <div class="p-4 mb-4 bg-blue-200 bg-opacity-25 border-2 ring-blue-400 border-blue-200">
+            <div class="flex items-center">
+                <div class="w-full mr-4" style="max-width: 102px; max-height: 143px;">
+                    <img src="/img/notif-image.png" alt="">
+                </div>
+                <div class="mr-6">
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">How To Set a Cool Outfit For Your Daily!</h4>
+                        <p class="text-blue-400 text-xs">06.40am</p>
+                    </div>
+                    <p class="text-sm">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+                <div class="text-blue-400">
+                    <box-icon color="currentColor" animation="burst" name='circle' type='solid' ></box-icon>
+                </div>
+            </div>
+        </div>
+        <p class="text-base font-bold mb-4">Yesterday</p>
+        <div class="p-4 mb-4 bg-white bg-opacity-25 border ring-blue-400 border-blue-200">
+            <div class="flex items-center">
+                <div class="w-full mr-4" style="max-width: 102px; max-height: 143px;">
+                    <img src="/img/notif-image.png" alt="">
+                </div>
+                <div class="mr-6">
+                    <div class="mb-4">
+                        <h4 class="font-semibold mb-2">Niko Share To Us About Outfit</h4>
+                        <p class="text-blue-400 text-xs">Tuesday, 10.19am</p>
+                    </div>
+                    <p class="text-sm">
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+                <div class="hidden text-blue-400">
+                    <box-icon color="currentColor" animation="burst" name='circle' type='solid' ></box-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}
+{{ define "footer" }}
+    {{ partial "footer.html" . }}
+{{ end }}

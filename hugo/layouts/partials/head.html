@@ -1,0 +1,14 @@
+{{- $title := cond (isset . "Title") .Title $.Site.Title -}}
+{{ hugo.Generator }}
+<meta name="apple-mobile-web-app-title" content="{{ $title }}" />
+<meta name="application-name" content="{{ $title }}" />
+<meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="name" itemprop="name" content="{{ .Title }}">
+<meta name="description" itemprop="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description | default .Summary | truncate 100 }}{{ end }} /">
+{{- with .OutputFormats.Get "RSS" -}}
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />
+  <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $title }}" />
+{{- end -}}
+<link rel="stylesheet" href="{{ .Site.Data.webpack_assets.main.css }}" />
+<script defer src="{{ .Site.Data.webpack_assets.main.js }}"></script>

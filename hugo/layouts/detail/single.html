@@ -1,0 +1,93 @@
+{{ define "header" }}
+    {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div class="p-6 mt-9 mb-0.5">
+</div>
+<main class="w-full py-12">
+    <div class="grids">
+        <div class="item md-6">
+
+        </div>
+        <div class="item md-6">
+            <p class="text-sm text-gray-400">T-Shirt</p>
+            <h1 class="title">T-Shirt White Shotrange</h1>
+            <p class="text-xs text-gray-400">Available <span class="font-semibold">In Stock</span></p>
+            <div class="flex">
+                <div style="color: orange;" class="mr-2">
+                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                    <box-icon color="currentColor" size="xs" name='star-half' type='solid' ></box-icon>
+                </div>
+                <p class="text-sm"><span class="text-gray-400">4.5</span> <a href="" class="font-semibold underline">(2.421 reviews)</a></p>
+            </div>
+            <hr class="divider">
+            <p class="text-sm text-gray-400">Price</p>
+            <div class="flex items-center">
+                <p class="text-2xl font-bold">Rp 78.000</p>
+                <del class="text-sm ml-6 text-gray-400">Rp 120.000</del>
+            </div>
+            <hr class="divider">
+            <div class="grids ">
+                <div class="pr-8">
+                    <p class="text-xs mb-4 font-medium text-gray-400">Quantity</p>
+                    <div style="max-height: 32px;" class="inline-flex space-x-2">
+                        <button disabled type="button" class="px-0.5 disabled:text-grey-400 flex items-center border">
+                            <box-icon size="sm" color="currentColor" name='minus'></box-icon>
+                        </button>
+                        <input style="max-width: 32px;" type="text" class="p-2 inline">
+                        <button type="button" class="px-0.5 flex items-center border">
+                            <box-icon size="sm" color="currentColor" name='plus'></box-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="px-8 border-l-2">
+                    <p class="text-xs mb-4 font-medium text-gray-400">Size*</p>
+                    <div style="max-height: 32px;" class="inline-flex space-x-2">
+                        <div>
+                            <input type="radio" class="hidden" name="size" id="XS">
+                            <label for="XS" class="flex size-choose justify-center text-2xl px-px items-center border">
+                                <span>XS</span>    
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" class="hidden" name="size" id="S">
+                            <label for="S" class="flex size-choose justify-center text-2xl px-px items-center border">
+                                <span>S</span>    
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" class="hidden" name="size" id="M">
+                            <label for="M" class="flex size-choose justify-center text-2xl px-px items-center border">
+                                <span>M</span>    
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" class="hidden" name="size" id="L">
+                            <label for="L" class="flex size-choose justify-center text-2xl px-px items-center border">
+                                <span>L</span>    
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" class="hidden" name="size" id="XL">
+                            <label for="XL" class="flex size-choose justify-center text-2xl px-px items-center border">
+                                <span>XL</span>    
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="pr-8 border-l-2">
+                    <p class="text-xs mb-4 font-medium text-gray-400">Color*</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}
+{{ define "footer" }}
+    {{ partial "footer.html" . }}
+{{ end }}

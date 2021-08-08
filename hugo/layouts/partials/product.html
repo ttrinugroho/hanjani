@@ -1,0 +1,28 @@
+<div style="max-width: 260px;" class="px-4 w-full mx-auto py-6 bg-white shadow-lg">
+    <div class="mb-6 flex justify-center">
+        <img src="{{ .img }}" alt="">
+    </div>
+    <div>
+        <h3 class="mb-2 product-title">T-Shirt Red Tint</h3>
+        <p class="mb-2 product-price">Rp 85.000</p>
+        <p class="mb-2 product-desc">Suitable in all weather</p>
+        <div class="flex justify-between items-center">
+            <div>
+                <span style="color: orange;" class="inline-flex mr-2">
+                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                    <box-icon color="currentColor" size="xs" name='star-half' type='solid' ></box-icon>
+                </span>
+                <span class="rating">
+                    4.55
+                </span>
+            </div>
+            <button x-data="{love:false}" @click="love = !love" class="border-2 rounded-md text-sm text-blue-300 p-2 flex items-center border-blue-300">
+                <box-icon color="currentColor" name='heart' :type="love? 'solid':'regular'"></box-icon>
+                <span>Save</span>
+            </button>
+        </div>
+    </div>
+</div>

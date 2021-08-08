@@ -1,0 +1,77 @@
+{{ define "header"}}
+{{ partial "header-login.html" . }}
+{{end}}
+{{ define "main" }}
+<div style="--url-img: url(/img/mountain.png);" class="w-full min-h-screen bg-login relative">
+  <div class="w-full grids min-h-screen items-center justify-center">
+    <div class="item xs-12">
+      <div class="grids items-center justify-center">
+        <div class="item xs-12">
+          <div class="w-full mx-auto max-w-sm p-2">
+            <div class="text-center mb-8">
+              <h1 class="text-5xl mb-4 text-blue-400">
+                Sign UP
+              </h1>
+              <p>Please fill the form to continue.</p>
+            </div>
+            <div class="mb-9">
+              <form action="">
+                <div class="mb-4">
+                  <label class="text-xs text-blue-400" for="full_name">Full Name</label>
+                  <input type="text" name="Full Name" id="full_name"
+                    class="focus:ring-blue-400 focus:border-blue-400 block w-full sm:text-sm border-gray-300 rounded-md"
+                    placeholder="Full name">
+                </div>
+                <div class="mb-4">
+                  <label class="text-xs text-blue-400" for="email">Email</label>
+                  <input type="email" name="Email" id="email"
+                    class="focus:ring-blue-400 focus:border-blue-400 block w-full sm:text-sm border-gray-300 rounded-md"
+                    placeholder="Email">
+                </div>
+                <div class="mb-4">
+                  <label class="text-xs text-blue-400" for="password">Password</label>
+                  <div x-data="{ show: true }" class="mt-1 relative rounded-md">
+                    <input :type="show ? 'password' : 'text'" name="Password" placeholder="password" id="password"
+                      class="focus:ring-blue-400 focus:border-blue-400 block w-full pl-4 pr-12 sm:text-sm border-gray-300 rounded-md">
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <button type="button" @click="show = !show" class="flex text-gray-400 px-3 outline-none">
+                        <box-icon color="currentColor" :name="show ? 'hide':'show-alt'"></box-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <label class="text-xs text-blue-400" for="confirm_password">Confirm Password</label>
+                  <div x-data="{ show: true }" class="mt-1 relative rounded-md">
+                    <input :type="show ? 'password' : 'text'" name="Confirm Password" placeholder="password" id="confirm_password"
+                      class="focus:ring-blue-400 focus:border-blue-400 block w-full pl-4 pr-12 sm:text-sm border-gray-300 rounded-md">
+                    <div class="absolute inset-y-0 right-0 flex items-center">
+                      <button type="button" @click="show = !show" class="flex text-gray-400 px-3 outline-none">
+                        <box-icon color="currentColor" :name="show ? 'hide':'show-alt'"></box-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-start mb-8">
+                  <div class="flex items-center h-5">
+                    <input id="candidates" name="candidates" type="checkbox" class="focus:ring-blue-400 h-4 w-4 text-blue-500 border-gray-300 rounded">
+                  </div>
+                  <div class="ml-3 text-sm">
+                    <label for="candidates" class="text-gray-500">I agree with the terms and condition.</label>
+                  </div>
+                </div>
+
+                <button type="submit" class="flex w-full justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Save
+                </button>
+              </form>
+            </div>
+            <p class="text-gray-500 text-center">Already have an account? <a href="/" class="text-blue-400 font-bold">Login!</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{{ end }}

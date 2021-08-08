@@ -1,0 +1,267 @@
+{{ define "header" }}
+    {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div class="p-6 mt-9 mb-0.5">
+</div>
+<main class="w-full py-12">
+    <div class="container-w-custom px-6">
+        <div class="grids grids-6">
+            <div class="item sm-3 md-3">
+                <div class="bg-white rounded py-6 border">
+                    <div class="pb-8 px-4">
+                        <div class="flex px-2">
+                            <div class="rounded-full mr-5 overflow-hidden w-20 h-20 border">
+                                <img src="/img/bottom-promosi.png" alt="">
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="text-sm mb-2 font-semibold">John Doe</h4>
+                                <p class="description mb-2 flex">
+                                    <box-icon type='solid' color="currentColor" name='map'></box-icon>
+                                    <span class="ml-2">Bandung</span>
+                                </p>
+                                <p class="text-sm">Casual Style</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                    <div class="py-8 px-4">
+                        <div class="py-4">
+                            <div class="flex mb-2">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="width: 1.25em;" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                    <path d="M20 13.0723V15.3494C20 16.1227 17.9377 16.7672 15.4028 16.7672C12.8679 16.7672 10.8486 16.1442 10.8486 15.3709V15.1131L10.8057 13.3086H10.8271C11.1708 13.9746 13.0613 14.4901 15.3384 14.4901C17.6154 14.4901 19.957 13.8457 19.957 13.0723H20V13.0723Z" fill="#E2A63B"/>
+                                    <path d="M15.2739 4.60828V6.86389H15.231C15.231 7.65874 13.1042 8.28172 10.5908 8.28172C9.62413 8.30319 8.63594 8.19579 7.69072 7.95948L7.64775 8.00245C7.17514 7.61578 6.6381 7.31504 6.05808 7.1217V7.07873L5.99365 4.69421C6.14402 5.42459 8.14187 6.00461 10.5694 6.00461C12.9968 6.00461 15.231 5.38163 15.231 4.60828H15.2739Z" fill="#F4B844"/>
+                                    <path d="M15.2739 4.65126C15.2739 5.42461 13.1472 6.04759 10.6123 6.04759C8.07739 6.04759 6.16548 5.46758 6.01512 4.7372C6.01512 4.71574 5.99365 4.67277 5.99365 4.65126C5.99365 3.87792 8.05593 3.23343 10.6123 3.23343C13.1686 3.21197 15.2739 3.85641 15.2739 4.65126Z" fill="#FEDB41"/>
+                                    <path d="M10.8271 13.3085L10.8057 12.8359L10.7627 10.9025C10.9131 11.6329 12.9109 12.2129 15.3384 12.2129C17.7659 12.2129 19.9141 11.5899 19.9785 10.838H20V13.0722H19.957C19.957 13.8455 17.8732 14.49 15.3384 14.49C12.8035 14.49 11.1709 13.9744 10.8271 13.3085Z" fill="#F4B844"/>
+                                    <path d="M7.75537 14.7478C8.33538 14.2108 8.78653 13.5233 9.0228 12.7715H9.1302C9.60281 12.8145 10.0754 12.8359 10.591 12.8359H10.8058V13.3085L10.8488 15.1131H10.6125C9.66724 15.1345 8.74352 15.0271 7.8198 14.8123L7.75537 14.7478Z" fill="#E2A63B"/>
+                                    <path d="M10.8269 10.7306V10.8381L10.8699 12.8359H10.6551C10.118 12.8359 9.62391 12.8144 9.15135 12.7715H9.04395C9.19431 12.3204 9.25874 11.8478 9.25874 11.3751C9.25874 11.0529 9.21578 10.7522 9.15135 10.4514H9.25874C9.70985 10.4944 10.161 10.5158 10.6551 10.5158L10.8484 10.6232C10.8269 10.6662 10.8269 10.7091 10.8269 10.7306Z" fill="#F4B844"/>
+                                    <path d="M7.69063 7.95948C8.63586 8.19579 9.62401 8.30319 10.5907 8.28173C13.1041 8.28173 15.2309 7.65875 15.2309 6.86389H15.2738V9.39878C12.9323 9.39878 11.0204 9.95733 10.7841 10.6662L10.5907 10.5588C10.1181 10.5588 9.66702 10.5373 9.23737 10.4944H9.12997C8.93664 9.50618 8.42106 8.62543 7.64771 7.98095L7.69063 7.95948Z" fill="#E2A63B"/>
+                                    <path d="M9.17303 10.4944C8.95823 9.50619 8.42115 8.60397 7.6478 7.93803C7.17519 7.50838 6.61664 7.20764 6.01517 7.03577C5.58552 6.8854 5.11291 6.82097 4.66181 6.82097C2.10541 6.79942 0.0216314 8.84024 0.000167763 11.3966C-0.0212959 13.9529 2.01948 16.0367 4.57587 16.0582C5.7574 16.0582 6.87445 15.6285 7.7552 14.8337C8.35672 14.2751 8.80782 13.5663 9.04413 12.7929C9.1945 12.3418 9.25893 11.8906 9.25893 11.418C9.25897 11.1174 9.17303 10.7951 9.17303 10.4944Z" fill="#FEDB41"/>
+                                    <path d="M19.9785 10.7951V10.8381C19.9141 11.5899 17.8303 12.2129 15.3384 12.2129C12.8465 12.2129 10.9131 11.6329 10.7627 10.9025V10.7951C10.7627 10.7522 10.7627 10.7092 10.7842 10.6662C11.0205 9.95731 12.9324 9.3988 15.2739 9.3988H15.3384C17.8733 9.39876 19.9785 10.0217 19.9785 10.7951Z" fill="#FEDB41"/>
+                                    <path d="M4.66192 10.8596C4.27525 10.8596 3.95301 10.5373 3.95301 10.1507C3.95301 9.76398 4.27525 9.44174 4.66192 9.44174C5.0486 9.44174 5.37084 9.76398 5.37084 10.1507C5.37084 10.387 5.56418 10.5803 5.80048 10.5803C6.03679 10.5803 6.23012 10.387 6.23012 10.1507C6.23012 9.46324 5.75751 8.84026 5.09157 8.64693V8.47505C5.09157 8.23875 4.89823 8.04541 4.66192 8.04541C4.42562 8.04541 4.23228 8.23875 4.23228 8.47505V8.64693C3.54487 8.8188 3.07226 9.44178 3.09372 10.1507C3.09372 11.0099 3.80264 11.7189 4.66192 11.7189C5.0486 11.7189 5.37084 12.0411 5.37084 12.4278C5.37084 12.8144 5.0486 13.1367 4.66192 13.1367C4.27525 13.1367 3.95301 12.8144 3.95301 12.4278C3.95301 12.1915 3.75967 11.9981 3.52336 11.9981C3.28706 11.9981 3.09372 12.1915 3.09372 12.4278C3.09372 13.1367 3.56633 13.7382 4.23228 13.9315V14.2752C4.23228 14.5115 4.42562 14.7049 4.66192 14.7049C4.89823 14.7049 5.09157 14.5115 5.09157 14.2752V13.9315C5.92935 13.6952 6.40196 12.8144 6.14419 11.9766C5.95085 11.3322 5.34933 10.8596 4.66192 10.8596Z" fill="#E2A63B"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                <p class="ml-4">Balance</p>
+                            </div>
+                            <div class="flex justify-between">
+                                <p class="description">Total</p>
+                                <p class="description font-semibold">Rp 497.500</p>
+                            </div>
+                        </div>
+                        <div class="py-4">
+                            <div class="flex mb-2">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="width: 1.25em;" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0)">
+                                    <path d="M20 13.0723V15.3494C20 16.1227 17.9377 16.7672 15.4028 16.7672C12.8679 16.7672 10.8486 16.1442 10.8486 15.3709V15.1131L10.8057 13.3086H10.8271C11.1708 13.9746 13.0613 14.4901 15.3384 14.4901C17.6154 14.4901 19.957 13.8457 19.957 13.0723H20V13.0723Z" fill="#E2A63B"/>
+                                    <path d="M15.2739 4.60828V6.86389H15.231C15.231 7.65874 13.1042 8.28172 10.5908 8.28172C9.62413 8.30319 8.63594 8.19579 7.69072 7.95948L7.64775 8.00245C7.17514 7.61578 6.6381 7.31504 6.05808 7.1217V7.07873L5.99365 4.69421C6.14402 5.42459 8.14187 6.00461 10.5694 6.00461C12.9968 6.00461 15.231 5.38163 15.231 4.60828H15.2739Z" fill="#F4B844"/>
+                                    <path d="M15.2739 4.65126C15.2739 5.42461 13.1472 6.04759 10.6123 6.04759C8.07739 6.04759 6.16548 5.46758 6.01512 4.7372C6.01512 4.71574 5.99365 4.67277 5.99365 4.65126C5.99365 3.87792 8.05593 3.23343 10.6123 3.23343C13.1686 3.21197 15.2739 3.85641 15.2739 4.65126Z" fill="#FEDB41"/>
+                                    <path d="M10.8271 13.3085L10.8057 12.8359L10.7627 10.9025C10.9131 11.6329 12.9109 12.2129 15.3384 12.2129C17.7659 12.2129 19.9141 11.5899 19.9785 10.838H20V13.0722H19.957C19.957 13.8455 17.8732 14.49 15.3384 14.49C12.8035 14.49 11.1709 13.9744 10.8271 13.3085Z" fill="#F4B844"/>
+                                    <path d="M7.75537 14.7478C8.33538 14.2108 8.78653 13.5233 9.0228 12.7715H9.1302C9.60281 12.8145 10.0754 12.8359 10.591 12.8359H10.8058V13.3085L10.8488 15.1131H10.6125C9.66724 15.1345 8.74352 15.0271 7.8198 14.8123L7.75537 14.7478Z" fill="#E2A63B"/>
+                                    <path d="M10.8269 10.7306V10.8381L10.8699 12.8359H10.6551C10.118 12.8359 9.62391 12.8144 9.15135 12.7715H9.04395C9.19431 12.3204 9.25874 11.8478 9.25874 11.3751C9.25874 11.0529 9.21578 10.7522 9.15135 10.4514H9.25874C9.70985 10.4944 10.161 10.5158 10.6551 10.5158L10.8484 10.6232C10.8269 10.6662 10.8269 10.7091 10.8269 10.7306Z" fill="#F4B844"/>
+                                    <path d="M7.69063 7.95948C8.63586 8.19579 9.62401 8.30319 10.5907 8.28173C13.1041 8.28173 15.2309 7.65875 15.2309 6.86389H15.2738V9.39878C12.9323 9.39878 11.0204 9.95733 10.7841 10.6662L10.5907 10.5588C10.1181 10.5588 9.66702 10.5373 9.23737 10.4944H9.12997C8.93664 9.50618 8.42106 8.62543 7.64771 7.98095L7.69063 7.95948Z" fill="#E2A63B"/>
+                                    <path d="M9.17303 10.4944C8.95823 9.50619 8.42115 8.60397 7.6478 7.93803C7.17519 7.50838 6.61664 7.20764 6.01517 7.03577C5.58552 6.8854 5.11291 6.82097 4.66181 6.82097C2.10541 6.79942 0.0216314 8.84024 0.000167763 11.3966C-0.0212959 13.9529 2.01948 16.0367 4.57587 16.0582C5.7574 16.0582 6.87445 15.6285 7.7552 14.8337C8.35672 14.2751 8.80782 13.5663 9.04413 12.7929C9.1945 12.3418 9.25893 11.8906 9.25893 11.418C9.25897 11.1174 9.17303 10.7951 9.17303 10.4944Z" fill="#FEDB41"/>
+                                    <path d="M19.9785 10.7951V10.8381C19.9141 11.5899 17.8303 12.2129 15.3384 12.2129C12.8465 12.2129 10.9131 11.6329 10.7627 10.9025V10.7951C10.7627 10.7522 10.7627 10.7092 10.7842 10.6662C11.0205 9.95731 12.9324 9.3988 15.2739 9.3988H15.3384C17.8733 9.39876 19.9785 10.0217 19.9785 10.7951Z" fill="#FEDB41"/>
+                                    <path d="M4.66192 10.8596C4.27525 10.8596 3.95301 10.5373 3.95301 10.1507C3.95301 9.76398 4.27525 9.44174 4.66192 9.44174C5.0486 9.44174 5.37084 9.76398 5.37084 10.1507C5.37084 10.387 5.56418 10.5803 5.80048 10.5803C6.03679 10.5803 6.23012 10.387 6.23012 10.1507C6.23012 9.46324 5.75751 8.84026 5.09157 8.64693V8.47505C5.09157 8.23875 4.89823 8.04541 4.66192 8.04541C4.42562 8.04541 4.23228 8.23875 4.23228 8.47505V8.64693C3.54487 8.8188 3.07226 9.44178 3.09372 10.1507C3.09372 11.0099 3.80264 11.7189 4.66192 11.7189C5.0486 11.7189 5.37084 12.0411 5.37084 12.4278C5.37084 12.8144 5.0486 13.1367 4.66192 13.1367C4.27525 13.1367 3.95301 12.8144 3.95301 12.4278C3.95301 12.1915 3.75967 11.9981 3.52336 11.9981C3.28706 11.9981 3.09372 12.1915 3.09372 12.4278C3.09372 13.1367 3.56633 13.7382 4.23228 13.9315V14.2752C4.23228 14.5115 4.42562 14.7049 4.66192 14.7049C4.89823 14.7049 5.09157 14.5115 5.09157 14.2752V13.9315C5.92935 13.6952 6.40196 12.8144 6.14419 11.9766C5.95085 11.3322 5.34933 10.8596 4.66192 10.8596Z" fill="#E2A63B"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                <p class="ml-4">Voucher</p>
+                            </div>
+                            <div class="flex justify-between">
+                                <p class="description">Jumlah</p>
+                                <p class="description font-semibold">12 Voucher</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                    <div class="pt-8">
+                        <div class="py-2 px-4 mb-3 text-blue-300 border-l-4 border-blue-400 flex">
+                            <box-icon color="currentColor" name='user-circle'></box-icon>
+                            <span class="ml-2">My Account</span>
+                        </div>
+                        <div class="py-2 px-4 mb-3 flex">
+                            <box-icon color="currentColor" rotate="90" name='barcode'></box-icon>
+                            <span class="ml-2">My Order</span>
+                        </div>
+                        <div class="py-2 px-4 mb-3 flex">
+                            <box-icon color="currentColor" name='comment-error'></box-icon>
+                            <span class="ml-2">Feedback</span>
+                        </div>
+                        <div class="py-2 px-4 mb-3 flex">
+                            <box-icon color="currentColor" name='help-circle'></box-icon>
+                            <span class="ml-2">Help Center</span>
+                        </div>
+                        <div class="py-2 px-4 mb-3 flex">
+                            <box-icon color="currentColor" name='cog'></box-icon>
+                            <span class="ml-2">Settings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item md-9">
+                <div class="p-6 rounded border">
+                    <h4 class="title mb-4">My Profile</h4>
+                    <hr class="divider">
+                    <div class="py-6">
+                        <div class="grids">
+                            <div class="item md-8">
+                                <div class="grids pr-6 items-center">
+                                    <div class="item md-3">
+                                        <div class="py-3">
+                                            <span class="text-sm">Username</span>
+                                        </div>
+                                    </div>
+                                    <div class="item md-9">
+                                        <div class="py-3">
+                                            <span class="text-sm">JohnDhoe</span>
+                                        </div>
+                                    </div>
+                                    <div class="item md-3">
+                                        <div class="py-3">
+                                            <label for="name" class="text-sm">Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="item md-9">
+                                        <div class="py-3">
+                                            <input type="text" name="name" id="name" autocomplete="given-name" class="w-full focus:ring-indigo-500 focus:border-indigo-500 block max-w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                        </div>
+                                    </div>
+                                    <div class="item md-3">
+                                        <div class="py-3">
+                                            <span class="text-sm">Email</span></div>
+                                        </div>
+                                    <div class="item md-9">
+                                        <div class="py-3">
+                                            <span class="text-sm">Joh****@mail.com</span></div>
+                                        </div>
+                                    <div class="item md-3">
+                                        <div class="py-3">
+                                            <span class="text-sm">Phone <br> Number</span></div>
+                                        </div>
+                                    <div class="item md-9">
+                                        <div class="py-3">
+                                            <span class="text-sm">+90 2*********</span></div>
+                                        </div>
+                                    <div class="item md-3">
+                                        <div class="py-3">
+                                            <span class="text-sm">Gender</span></div>
+                                        </div>
+                                    <div class="item md-9">
+                                        <div class="flex py-3 items-center">
+                                            <div class="flex items-center">
+                                                <input id="Male" name="gender" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                                <label for="Male" class="ml-3 block text-sm font-medium text-gray-700">
+                                                  Male
+                                                </label>
+                                            </div>
+                                            <div class="flex ml-8 items-center">
+                                                <input id="Feemale" name="gender" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                                <label for="Feemale" class="ml-3 block text-sm font-medium text-gray-700">
+                                                  Feemale
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item md-3">
+                                        <div class="py-3">
+                                            <span class="text-sm">Birthday <br> Date</span></div>
+                                        </div>
+                                    <div class="item md-9">
+                                        <div class="flex py-3 items-center">
+                                            <div class="grids grids-2 items-center">
+                                                <div class="item md-4">
+                                                    <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-4 border rounded border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-blue-400 focus:border-bluering-blue-400 sm:text-sm">
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                      </select>
+                                                </div>
+                                                <div class="item md-4">
+                                                    <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-4 border rounded border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-blue-400 focus:border-bluering-blue-400 sm:text-sm">
+                                                        <option value="Jan">Jan</option>
+                                                        <option value="Feb">Feb</option>
+                                                        <option value="March">March</option>
+                                                        <option value="Apr">Apr</option>
+                                                        <option value="Mey">May</option>
+                                                        <option value="Jun">Jun</option>
+                                                        <option value="Jul">Jul</option>
+                                                        <option value="Aug">Aug</option>
+                                                        <option value="Sept">Sept</option>
+                                                        <option value="Oct">Oct</option>
+                                                        <option value="Nov">Oct</option>
+                                                        <option value="Des">Oct</option>
+                                                      </select>
+                                                </div>
+                                                <div class="item md-4">
+                                                    <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-4 border rounded border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-blue-400 focus:border-bluering-blue-400 sm:text-sm">
+                                                        <option value="1991">1991</option>
+                                                        <option value="1992">1992</option>
+                                                        <option value="1993">1993</option>
+                                                        <option value="1994">1994</option>
+                                                        <option value="1995">1995</option>
+                                                        <option value="1996">1996</option>
+                                                        <option value="1997">1997</option>
+                                                        <option value="1998">1998</option>
+                                                        <option value="1999">1999</option>
+                                                        <option value="2000">2000</option>
+                                                      </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item md-3">
+                                    </div>
+                                    <div class="item md-9">
+                                        <button class="flex-shrink-0 bg-blue-400 text-white text-sm font-semibold py-2 px-4 shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                                            Save
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="item md-4 border-l">
+                                <div class="grids h-full items-center">
+                                    <div class="item md-12">
+                                        <div class="flex flex-col items-center">
+                                            <div class="rounded-full mb-6 overflow-hidden w-20 h-20 border">
+                                                <img src="/img/bottom-promosi.png" alt="">
+                                            </div>
+                                            <div class="mb-2">
+                                                <input type="file" id="upload" class="hidden">
+                                                <label for="upload" class="flex-shrink-0 block border text-xs font-semibold py-2 px-4 shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">Upload Image</label>
+                                            </div>
+                                            <p class="text-xs text-gray-400 mb-2">Max Size: 2 mb</p>
+                                            <p class="text-xs text-gray-400">Format: jpg, png</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}
+{{ define "footer" }}
+    {{ partial "footer.html" . }}
+{{ end }}
