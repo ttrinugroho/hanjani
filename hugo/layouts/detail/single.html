@@ -6,82 +6,198 @@
 <div class="p-6 mt-9 mb-0.5">
 </div>
 <main class="w-full py-12">
-    <div class="grids">
-        <div class="item md-6">
-
+    <div class="container-w-custom">
+        <div class="grids">
+            <div class="item md-6">
+                <div x-data="{img:'/img/product-1.png'}" class="grids items-center">
+                    <div class="item md-9">
+                        <div class="flex w-full">
+                            <div class="flex w-full items-center justify-center">
+                                <img :src="img" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item md-3">
+                        <div class="flex-col items-center flex">
+                            <button @click="img = '/img/product-2.png'" class="py-3 w-20 mb-1 px-3">
+                                <img src="/img/product-2.png" alt="">
+                            </button>
+                            <button @click="img = '/img/product-3.png'" class="py-3 w-20 mb-1 px-3">
+                                <img src="/img/product-3.png" alt="">
+                            </button>
+                            <button @click="img = '/img/product-4.png'" class="py-3 w-20 mb-1 px-3">
+                                <img src="/img/product-4.png" alt="">
+                            </button>
+                            <button @click="img = '/img/product-5.png'" class="py-3 w-20 mb-1 px-3">
+                                <img src="/img/product-5.png" alt="">
+                            </button>
+                            <button @click="img = '/img/product-6.png'" class="py-3 w-20 mb-1 px-3">
+                                <img src="/img/product-6.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item md-6">
+                <div class="flex justify-center">
+                    <div>
+                        <p class="text-sm mb-4 text-gray-400">T-Shirt</p>
+                        <h1 class="title mb-4">T-Shirt White Shotrange</h1>
+                        <p class="text-xs mb-1 text-gray-400">Available <span class="font-semibold">In Stock</span></p>
+                        <div class="flex mb-6">
+                            <div style="color: orange;" class="mr-2">
+                                <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                                <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                                <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                                <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
+                                <box-icon color="currentColor" size="xs" name='star-half' type='solid' ></box-icon>
+                            </div>
+                            <p class="text-sm"><span class="text-gray-400">4.5</span> <a href="" class="font-semibold underline">(2.421 reviews)</a></p>
+                        </div>
+                        <hr class="divider">
+                        <div  class="py-6">
+                            <p class="text-sm text-gray-400">Price</p>
+                            <div class="flex items-center">
+                                <p class="text-2xl font-bold">Rp 78.000</p>
+                                <del class="text-sm ml-6 text-gray-400">Rp 120.000</del>
+                            </div>
+                        </div>
+                        <hr class="divider">
+                        <div class="grids py-6">
+                            <div class="pr-8">
+                                <p class="text-xs mb-4 font-medium text-gray-400">Quantity</p>
+                                <div x-data="" style="max-height: 32px;" class="inline-flex space-x-2">
+                                    <button disabled type="button" class="px-0.5 disabled:text-grey-400 flex items-center border">
+                                        <box-icon size="sm" color="currentColor" name='minus'></box-icon>
+                                    </button>
+                                    <input style="max-width: 32px;" value="1" type="text" class="p-2 inline">
+                                    <button type="button" class="px-0.5 flex items-center border">
+                                        <box-icon size="sm" color="currentColor" name='plus'></box-icon>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="px-8 border-l-2">
+                                <p class="text-xs mb-4 font-medium text-gray-400">Size*</p>
+                                <div style="max-height: 32px;" class="inline-flex space-x-2">
+                                    <div>
+                                        <input type="radio" class="hidden" name="size" id="XS">
+                                        <label for="XS" class="flex size-choose justify-center text-sm py-1 px-px items-center border">
+                                            <span>XS</span>    
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" class="hidden" name="size" id="S">
+                                        <label for="S" class="flex size-choose justify-center text-sm py-1 px-px items-center border">
+                                            <span>S</span>    
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" class="hidden" name="size" id="M">
+                                        <label for="M" class="flex size-choose justify-center text-sm py-1 px-px items-center border">
+                                            <span>M</span>    
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" class="hidden" name="size" id="L">
+                                        <label for="L" class="flex size-choose justify-center text-sm py-1 px-px items-center border">
+                                            <span>L</span>    
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" class="hidden" name="size" id="XL">
+                                        <label for="XL" class="flex size-choose justify-center text-sm py-1 px-px items-center border">
+                                            <span>XL</span>    
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pl-8 border-l-2">
+                                <p class="text-xs mb-4 font-medium text-gray-400">Color*</p>
+                                <input type="color" name="" id="">
+                            </div>
+                        </div>
+                        <div class="flex mb-6 space-x-4">
+                            <button class="flex-shrink-0 bg-blue-400 text-white text-sm font-semibold py-2 px-4 shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                                Add to Cart
+                            </button>
+                            <button class="flex-shrink-0 flex border-blue-400 text-blue-400 text-sm font-semibold py-2 px-4 shadow-md hover:border-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                                <box-icon type='solid' color="currentColor" name='heart'></box-icon> Wishlist
+                            </button>
+                        </div>
+                        <div class="mb-4">
+                            <p class="mb-4">Share</p>
+                            <div class="flex">
+                                <button class="flex-shrink-0 flex text-sm font-semibold py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                                    <box-icon name='facebook' type='logo' ></box-icon>
+                                </button>
+                                <button class="flex-shrink-0 flex text-sm font-semibold py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                                    <box-icon name='twitter' type='logo' ></box-icon>
+                                </button>
+                                <button class="flex-shrink-0 flex text-sm font-semibold py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                                    <box-icon name='instagram' type='logo' ></box-icon>
+                                </button>
+                                <button class="flex-shrink-0 flex text-sm font-semibold py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                                    <box-icon name='google' type='logo' ></box-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
         </div>
-        <div class="item md-6">
-            <p class="text-sm text-gray-400">T-Shirt</p>
-            <h1 class="title">T-Shirt White Shotrange</h1>
-            <p class="text-xs text-gray-400">Available <span class="font-semibold">In Stock</span></p>
-            <div class="flex">
-                <div style="color: orange;" class="mr-2">
-                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
-                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
-                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
-                    <box-icon color="currentColor" size="xs" name='star' type='solid' ></box-icon>
-                    <box-icon color="currentColor" size="xs" name='star-half' type='solid' ></box-icon>
+        <hr class="divider">
+        <div class="py-8">
+            <div class="grids">
+                <div class="md-6">
+                    <p class="product-price mb-4">Detail</p>
+                    <ul class="description list-inside list-decimal">
+                        <li>Softer than other cotton materials</li>
+                        <li>4x more fiber than other cotton materials</li>
+                        <li>Sweat absorption is better than other cotton materials</li>
+                        <li>Hypoallergenic</li>
+                        <li>Has natural anti-bacterial</li>
+                    </ul>
                 </div>
-                <p class="text-sm"><span class="text-gray-400">4.5</span> <a href="" class="font-semibold underline">(2.421 reviews)</a></p>
+                <div class="md-6">
+                    <p class="product-price mb-4">Description</p>
+                    <p class="description">
+                        T-shirt with 100% Cotton Combed 30s Reactive. This material is very suitable for use in tropical climates such as in Indonesia, cool, and also relaxing. Do not forget to also choose the many colors you want. Our products have been tested for durability and can also be used for a long time.
+                    </p>
+                </div>
             </div>
-            <hr class="divider">
-            <p class="text-sm text-gray-400">Price</p>
-            <div class="flex items-center">
-                <p class="text-2xl font-bold">Rp 78.000</p>
-                <del class="text-sm ml-6 text-gray-400">Rp 120.000</del>
+        </div>
+        <hr class="divider mb-8">
+        <div class="mb-8">
+            <h3 class="title mb-8">Similiar Products</h3>
+            <div class="grids justify-center grids-2">
+                <div class="item md-3">
+                    {{ partial "product.html" (dict "img" "/img/product-2.png") }}
+                </div>
+                <div class="item md-3">
+                    {{ partial "product.html" (dict "img" "/img/product-3.png") }}
+                </div>
+                <div class="item md-3">
+                    {{ partial "product.html" (dict "img" "/img/product-4.png") }}
+                </div>
+                <div class="item md-3">
+                    {{ partial "product.html" (dict "img" "/img/product-5.png") }}
+                </div>
             </div>
-            <hr class="divider">
-            <div class="grids ">
-                <div class="pr-8">
-                    <p class="text-xs mb-4 font-medium text-gray-400">Quantity</p>
-                    <div style="max-height: 32px;" class="inline-flex space-x-2">
-                        <button disabled type="button" class="px-0.5 disabled:text-grey-400 flex items-center border">
-                            <box-icon size="sm" color="currentColor" name='minus'></box-icon>
-                        </button>
-                        <input style="max-width: 32px;" type="text" class="p-2 inline">
-                        <button type="button" class="px-0.5 flex items-center border">
-                            <box-icon size="sm" color="currentColor" name='plus'></box-icon>
-                        </button>
-                    </div>
+        </div>
+        <div class="mb-8">
+            <h3 class="title mb-8">Most Popular</h3>
+            <div class="grids justify-center grids-2">
+                <div class="item md-3">
+                    {{ partial "product.html" (dict "img" "/img/product-6.png") }}
                 </div>
-                <div class="px-8 border-l-2">
-                    <p class="text-xs mb-4 font-medium text-gray-400">Size*</p>
-                    <div style="max-height: 32px;" class="inline-flex space-x-2">
-                        <div>
-                            <input type="radio" class="hidden" name="size" id="XS">
-                            <label for="XS" class="flex size-choose justify-center text-2xl px-px items-center border">
-                                <span>XS</span>    
-                            </label>
-                        </div>
-                        <div>
-                            <input type="radio" class="hidden" name="size" id="S">
-                            <label for="S" class="flex size-choose justify-center text-2xl px-px items-center border">
-                                <span>S</span>    
-                            </label>
-                        </div>
-                        <div>
-                            <input type="radio" class="hidden" name="size" id="M">
-                            <label for="M" class="flex size-choose justify-center text-2xl px-px items-center border">
-                                <span>M</span>    
-                            </label>
-                        </div>
-                        <div>
-                            <input type="radio" class="hidden" name="size" id="L">
-                            <label for="L" class="flex size-choose justify-center text-2xl px-px items-center border">
-                                <span>L</span>    
-                            </label>
-                        </div>
-                        <div>
-                            <input type="radio" class="hidden" name="size" id="XL">
-                            <label for="XL" class="flex size-choose justify-center text-2xl px-px items-center border">
-                                <span>XL</span>    
-                            </label>
-                        </div>
-                    </div>
+                <div class="item md-3">
+                    {{ partial "product.html" (dict "img" "/img/product-7.png") }}
                 </div>
-                <div class="pr-8 border-l-2">
-                    <p class="text-xs mb-4 font-medium text-gray-400">Color*</p>
-
+                <div class="item md-3">
+                    {{ partial "product.html" (dict "img" "/img/product-8.png") }}
+                </div>
+                <div class="item md-3">
+                    {{ partial "product.html" (dict "img" "/img/product-9.png") }}
                 </div>
             </div>
         </div>
