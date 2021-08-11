@@ -1,13 +1,16 @@
 <div style="z-index: 99;" class="w-full top-0 left-0 bg-white custom-shadow fixed">
   <header class="container-w-custom my-6 flex justify-between">
-    <h1 class="title font-bold">HANJANI COLLECTION</h1>
-    <nav class="space-x-10">
+    <h1 class="title font-bold">
+      <span class="hidden sm:inline">HANJANI</span>
+      <span class="hidden md:inline">COLLECTION</span>
+    </h1>
+    <nav class="hidden lg:block space-x-10">
       <a class="inline-block hover:text-green-300 menu-link" href="#">Man</a>
       <a class="inline-block hover:text-green-300 menu-link" href="#">Women</a>
       <a class="inline-block hover:text-green-300 menu-link" href="#">Category</a>
     </nav>
     <div class="flex">
-      <div class="relative rounded-md mr-10 shadow-sm">
+      <div class="relative pr-4 rounded-md shadow-sm">
         <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
           <span class="text-gray-500 flex sm:text-sm">
             <box-icon color="currentColor" name="search-alt-2"></box-icon>
@@ -21,12 +24,20 @@
         <a href="/notif">
           <box-icon name='bell'></box-icon>
         </a>
-        <a href="#">
+        <a href="/cart">
           <box-icon name='cart-alt'></box-icon>
         </a>
-        <a href="/profile">
-          <box-icon name='user-circle'></box-icon>
-        </a>
+        {{with .Params.type}}
+          <a href="/profile">
+            <div class="rounded-full mr-5 overflow-hidden w-6 h-6 border">
+              <img src="/img/bottom-promosi.png" alt="{{.}}">
+            </div>
+          </a>
+          {{else}}
+          <a href="/about">
+            <box-icon name='user-circle'></box-icon>
+          </a>
+        {{end}}
       </div>
     </div>
   </header>

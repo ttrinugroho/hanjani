@@ -5,19 +5,19 @@
 {{ define "main" }}
 <div class="p-6 mt-9 mb-0.5">
 </div>
-<main class="w-full py-12">
+<main class="w-full overflow-x-hidden py-12">
     <section id="slider" class="container-w-custom mb-10">
         <div class="grids">
-            <div class="item xs-12 md-7">
+            <div class="item xs-12 sm-12 md-7">
                 <div style="background-color: #F6F6F6; height:352px;" class="w-full overflow-hidden">
-                    <div class="grids">
+                    <div class="grids flex-row-reverse md:flex-row">
                         <div class="item xs-6">
                             <div class="flex justify-center">
                                 <img src="/img/slider-1.png" alt="">
                             </div>
                         </div>
                         <div class="item xs-6">
-                            <div class="pr-16 pt-8 pl-11">
+                            <div class="md:pr-16 px-2 pt-8 md:pl-11">
                                 <p class="mb-4 categorie">Outwear</p>
                                 <h3 class="mb-2 title">Jacket for Man</h3>
                                 <p class="mb-4 description">This jacket is perfect for keeping you company in winter! and also the ingredients used are very soft, making you feel confident every day.</p>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item xs-12 md-5">
+            <div class="item xs-12 sm-12 md-5">
                 <div class="grids flex-col">
                     <div class="item xs-12">
                         <div class="py-6 px-8 bg-blue-200">
@@ -95,24 +95,24 @@
         <h3 class="title mb-8">Best Seller Items</h3>
         <div class="grids justify-center grids-2">
             <div class="item md-3">
-                {{ partial "product.html" (dict "img" "/img/product-1.png") }}
+                {{ partial "product.html" (dict "img" "/img/product-1.png" "title" "T-Shirt Red Tint") }}
             </div>
             <div class="item md-3">
-                {{ partial "product.html" (dict "img" "/img/product-1.png") }}
+                {{ partial "product.html" (dict "img" "/img/product-4.png" "title" "T-Shirt White Shortrange") }}
             </div>
             <div class="item md-3">
-                {{ partial "product.html" (dict "img" "/img/product-1.png") }}
+                {{ partial "product.html" (dict "img" "/img/product-8.png" "title" "Collar Shirt") }}
             </div>
             <div class="item md-3">
-                {{ partial "product.html" (dict "img" "/img/product-1.png") }}
+                {{ partial "product.html" (dict "img" "/img/product-7.png" "title" "T-Shirt Yellow Rainbow") }}
             </div>
         </div>
     </section>
     <section id="banner-catalog" class="container-w-custom mb-10">
         <div style="background-color: #F6F6F6;">
             <div class="grids">
-                <div class="item md-7">
-                    <div class="px-20 py-16">
+                <div class="item sm-7">
+                    <div class="px-10 py-6 md:px20 md:py16">
                         <p class="mb-4 categorie">Outwear</p>
                         <h3 class="mb-2 title">Jacket for Man</h3>
                         <p class="mb-4 description">
@@ -123,7 +123,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="item md-5">
+                <div class="item sm-5">
                     <div class="flex justify-center">
                         <img src="/img/bottom-promosi.png" alt="">
                     </div>

@@ -5,11 +5,14 @@
 {{ define "main" }}
 <div class="p-6 mt-9 mb-0.5">
 </div>
-<main class="w-full py-12">
+<main class="w-full overflow-x-hidden py-12">
     <div class="container-w-custom px-6">
         <div class="grids grids-6">
-            <div class="item sm-5 md-4 lg-3">
-                <div class="bg-white min-w-full rounded py-6 border">
+            <div x-data="{open:false}" class="item xs-12 relative xs-6 md-3">
+                <button @click="open=! open" class="flex md:hidden border justify-center items-center p-2">
+                    <box-icon name='menu' ></box-icon>
+                </button>
+                <div style="z-index: 10;" x-bind:class="{hidden:! open, block:open}" class="bg-white md:block absolute md:static rounded py-6 border">
                     <div class="pb-8 px-4">
                         <div class="flex px-2">
                             <div class="rounded-full mr-5 overflow-hidden w-20 h-20 border">
@@ -86,10 +89,10 @@
                     </div>
                     <hr class="divider">
                     <div class="pt-8">
-                        <div class="py-2 px-4 mb-3 flex">
+                        <a href="/profile" class="py-2 px-4 mb-3 flex">
                             <box-icon color="currentColor" name='user-circle'></box-icon>
                             <span class="ml-2">My Account</span>
-                        </div>
+                        </a>
                         <div class="py-2 px-4 mb-3 flex">
                             <box-icon color="currentColor" rotate="90" name='barcode'></box-icon>
                             <span class="ml-2">My Order</span>
@@ -102,14 +105,14 @@
                             <box-icon color="currentColor" name='help-circle'></box-icon>
                             <span class="ml-2">Help Center</span>
                         </div>
-                        <div class="py-2 px-4 mb-3 text-blue-300 border-l-4 border-blue-400 flex">
+                        <a href="/settings" class="py-2 text-blue-300 border-l-4 border-blue-400 px-4 mb-3 flex">
                             <box-icon color="currentColor" name='cog'></box-icon>
                             <span class="ml-2">Settings</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="item md-9">
+            <div class="item xs-12 md-9">
                 <div class="p-6 rounded border">
                     <h4 class="title mb-6">Settings</h4>
                     <hr class="divider">

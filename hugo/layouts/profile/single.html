@@ -5,11 +5,14 @@
 {{ define "main" }}
 <div class="p-6 mt-9 mb-0.5">
 </div>
-<main class="w-full py-12">
+<main class="w-full overflow-x-hidden py-12">
     <div class="container-w-custom px-6">
         <div class="grids grids-6">
-            <div class="item sm-3 md-3">
-                <div class="bg-white rounded py-6 border">
+            <div x-data="{open:false}" class="item xs-12 relative sm-6 md-3">
+                <button @click="open=! open" class="flex md:hidden border justify-center items-center p-2">
+                    <box-icon name='menu' ></box-icon>
+                </button>
+                <div x-bind:class="{hidden:! open, block:open}" class="bg-white md:block absolute md:static rounded py-6 border">
                     <div class="pb-8 px-4">
                         <div class="flex px-2">
                             <div class="rounded-full mr-5 overflow-hidden w-20 h-20 border">
@@ -102,62 +105,62 @@
                             <box-icon color="currentColor" name='help-circle'></box-icon>
                             <span class="ml-2">Help Center</span>
                         </div>
-                        <div class="py-2 px-4 mb-3 flex">
+                        <a href="/settings" class="py-2 px-4 mb-3 flex">
                             <box-icon color="currentColor" name='cog'></box-icon>
                             <span class="ml-2">Settings</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="item md-9">
+            <div class="item xs-12 md-9">
                 <div class="p-6 rounded border">
                     <h4 class="title mb-4">My Profile</h4>
                     <hr class="divider">
                     <div class="py-6">
                         <div class="grids">
-                            <div class="item md-8">
+                            <div class="item xs-12 md-8">
                                 <div class="grids pr-6 items-center">
-                                    <div class="item md-3">
+                                    <div class="item xs-3">
                                         <div class="py-3">
                                             <span class="text-sm">Username</span>
                                         </div>
                                     </div>
-                                    <div class="item md-9">
+                                    <div class="item xs-9">
                                         <div class="py-3">
                                             <span class="text-sm">JohnDhoe</span>
                                         </div>
                                     </div>
-                                    <div class="item md-3">
+                                    <div class="item xs-3">
                                         <div class="py-3">
                                             <label for="name" class="text-sm">Name</label>
                                         </div>
                                     </div>
-                                    <div class="item md-9">
+                                    <div class="item xs-9">
                                         <div class="py-3">
                                             <input type="text" name="name" id="name" autocomplete="given-name" class="w-full focus:ring-indigo-500 focus:border-indigo-500 block max-w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
                                         </div>
                                     </div>
-                                    <div class="item md-3">
+                                    <div class="item xs-3">
                                         <div class="py-3">
                                             <span class="text-sm">Email</span></div>
                                         </div>
-                                    <div class="item md-9">
+                                    <div class="item xs-9">
                                         <div class="py-3">
                                             <span class="text-sm">Joh****@mail.com</span></div>
                                         </div>
-                                    <div class="item md-3">
+                                    <div class="item xs-3">
                                         <div class="py-3">
                                             <span class="text-sm">Phone <br> Number</span></div>
                                         </div>
-                                    <div class="item md-9">
+                                    <div class="item xs-9">
                                         <div class="py-3">
                                             <span class="text-sm">+90 2*********</span></div>
                                         </div>
-                                    <div class="item md-3">
+                                    <div class="item xs-3">
                                         <div class="py-3">
                                             <span class="text-sm">Gender</span></div>
                                         </div>
-                                    <div class="item md-9">
+                                    <div class="item xs-9">
                                         <div class="flex py-3 items-center">
                                             <div class="flex items-center">
                                                 <input id="Male" name="gender" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
@@ -173,14 +176,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item md-3">
+                                    <div class="item xs-3">
                                         <div class="py-3">
                                             <span class="text-sm">Birthday <br> Date</span></div>
                                         </div>
-                                    <div class="item md-9">
+                                    <div class="item xs-9">
                                         <div class="flex py-3 items-center">
                                             <div class="grids grids-2 items-center">
-                                                <div class="item md-4">
+                                                <div class="item xs-4">
                                                     <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-4 border rounded border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-blue-400 focus:border-bluering-blue-400 sm:text-sm">
                                                         <option value="1">1</option>
                                                         <option value="2">2</option>
@@ -194,7 +197,7 @@
                                                         <option value="10">10</option>
                                                       </select>
                                                 </div>
-                                                <div class="item md-4">
+                                                <div class="item xs-4">
                                                     <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-4 border rounded border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-blue-400 focus:border-bluering-blue-400 sm:text-sm">
                                                         <option value="Jan">Jan</option>
                                                         <option value="Feb">Feb</option>
@@ -210,7 +213,7 @@
                                                         <option value="Des">Oct</option>
                                                       </select>
                                                 </div>
-                                                <div class="item md-4">
+                                                <div class="item xs-4">
                                                     <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-4 border rounded border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-blue-400 focus:border-bluering-blue-400 sm:text-sm">
                                                         <option value="1991">1991</option>
                                                         <option value="1992">1992</option>
@@ -227,20 +230,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item md-3">
+                                    <div class="item xs-3">
                                     </div>
-                                    <div class="item md-9">
+                                    <div class="item xs-9">
                                         <button class="flex-shrink-0 bg-blue-400 text-white text-sm font-semibold py-2 px-4 shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
                                             Save
                                         </button>
                                     </div>
-                                    
                                 </div>
                             </div>
-                            <div class="item md-4 border-l">
+                            <div class="item xs-12 md-4 border-l">
                                 <div class="grids h-full items-center">
-                                    <div class="item md-12">
-                                        <div class="flex flex-col items-center">
+                                    <div class="item xs-12">
+                                        <div class="flex pt-8 flex-col items-center">
                                             <div class="rounded-full mb-6 overflow-hidden w-20 h-20 border">
                                                 <img src="/img/bottom-promosi.png" alt="">
                                             </div>

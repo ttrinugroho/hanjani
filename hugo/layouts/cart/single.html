@@ -1,0 +1,263 @@
+{{ define "header" }}
+    {{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div class="p-6 mt-9 mb-0.5">
+</div>
+<main class="w-full py-12">
+    <div class="container-w-custom px-6">
+        <div class="grids">
+            <div class="item xs-12 sm-6 md-9">
+                <d class="p-4">
+                    <div class="grids items-center">
+                        <div class="item xs-12 md-6">
+                            <p class="text-sm text-gray-400">Product Details</p>
+                        </div>
+                        <div class="item xs-12 md-3">
+                            <p class="text-sm text-gray-400">Price</p>
+                        </div>
+                        <div class="item xs-12 md-3">
+                            <p class="text-sm text-gray-400">Quantity</p>
+                        </div>
+                    </div>
+                </d>
+                <div class="p-4">
+                    <div class="grids items-center">
+                        <div class="item xs-12 md-6">
+                            <div class="flex items-center">
+                                <div class="w-28">
+                                    <img src="/img/product-2.png" alt="">
+                                </div>
+                                <div class="ml-6">
+                                    <p class="text-base mb-4 font-semibold">T-Shirt White Shotrange</p>
+                                    <p class="text-sm mb-4"><span class="text-gray-400">Color:</span><span class="font-semibold">White</span></p>
+                                    <p class="text-sm"><span class="text-gray-400">Size</span><span class="font-semibold">L</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item xs-12 md-3">
+                            <p class="text-base font-semibold">Rp 78.000</p>
+                        </div>
+                        <div class="item xs-12 md-3">
+                            <p class="text-base mb-4 font-semibold">QUANTITY</p>
+                            <div x-data="{count:1}" style="max-height: 32px;" class="inline-flex space-x-2">
+                                <button x-bind:disabled="count === 1" @click="count= count - 1" type="button" class="px-0.5 disabled:text-grey-400 flex items-center border">
+                                    <box-icon size="sm" color="currentColor" name='minus'></box-icon>
+                                </button>
+                                <input :value="count" style="max-width: 32px;" value="1" type="text" class="p-2 inline">
+                                <button type="button" @click="count= count + 1" class="px-0.5 flex items-center border">
+                                    <box-icon size="sm" color="currentColor" name='plus'></box-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="grids items-center">
+                        <div class="item xs-12 md-6">
+                            <div class="flex items-center">
+                                <div class="w-28">
+                                    <img src="/img/product-1.png" alt="">
+                                </div>
+                                <div class="ml-6">
+                                    <p class="text-base mb-4 font-semibold">T-Shirt Red Tint</p>
+                                    <p class="text-sm mb-4"><span class="text-gray-400">Color:</span><span class="font-semibold">Red</span></p>
+                                    <p class="text-sm"><span class="text-gray-400">Size</span><span class="font-semibold">M</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item xs-12 md-3">
+                            <p class="text-base font-semibold">Rp 85.000</p>
+                        </div>
+                        <div class="item xs-12 md-3">
+                            <p class="text-base mb-4 font-semibold">QUANTITY</p>
+                            <div x-data="{count:1}" style="max-height: 32px;" class="inline-flex space-x-2">
+                                <button x-bind:disabled="count === 1" @click="count= count - 1" type="button" class="px-0.5 disabled:text-grey-400 flex items-center border">
+                                    <box-icon size="sm" color="currentColor" name='minus'></box-icon>
+                                </button>
+                                <input :value="count" style="max-width: 32px;" value="1" type="text" class="p-2 inline">
+                                <button type="button" @click="count= count + 1" class="px-0.5 flex items-center border">
+                                    <box-icon size="sm" color="currentColor" name='plus'></box-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item xs-12 sm-6 md-3">
+                <div style="background-color: rgba(240, 240, 240, 1);" class="p-6">
+                    <p class="product-title font-semibold mb-8">PAYMENT SUMMARY</p>
+                    <hr class="divider">
+                    <div class="flex mt-8 mb-6 justify-between">
+                        <h3 class="text-sm space-x-4">
+                            <span class="font-semibold">ITEM</span>
+                            <span>2</span>
+                        </h3>
+                        <h4 class="text-sm font-semibold">
+                            Rp. 163.000
+                        </h4>
+                    </div>
+
+                    <div class="mb-6" x-data="{show:true}">
+                        <label id="listbox-label" class="block text-sm font-semibold">
+                          SHIPPING
+                        </label>
+                        <div class="mt-1 relative">
+                          <button type="button" @click="show=! show" class="relative w-full bg-white border border-gray-300 shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" aria-haspopup="listbox" aria-expanded="true" aria-labelledby="listbox-label">
+                            <span class="flex items-center">
+                                <div class="flex-shrink-0 flex items-center h-6 w-6">
+                                    <svg width="39" height="16" viewBox="0 0 39 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.2178 11.4878L27.627 0.000854492H36.626L36.0277 2.87457H31.5242L31.225 4.30749H35.0514L34.4452 7.1812H30.6188L30.3196 8.622H34.8231L34.2168 11.4878H25.2178Z" fill="#25387B"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11.4879C8.00704 7.66151 18.8405 5.21295 28.7293 4.30754C31.3983 4.06347 34.0437 3.92175 37.7283 3.92175C37.87 3.92175 38.1141 3.87451 38.3031 3.82727L37.563 7.37021C37.5236 7.55916 37.2008 7.65364 36.9646 7.65364C14.3843 7.65364 0.866051 11.48 0.866051 11.48H0.00787319L0 11.4879Z" fill="#DF2128"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1248 11.4878L14.534 0.000854492H18.8406L21.4072 5.22078L22.5016 0.000854492H26.8083L24.3991 11.4878H20.0924L17.5651 6.07896L16.4314 11.4878H12.1248Z" fill="#25387B"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00708 6.70094L9.40851 0.000854492H13.7151L12.0303 8.04725C11.5107 10.5352 9.57384 11.4957 6.99931 11.4957H3.82642L4.55075 8.04725H5.98367C7.03868 8.04725 7.80238 7.66147 7.99921 6.70881L8.00708 6.70094Z" fill="#25387B"/>
+                                        <path d="M21.8244 15.3064L21.911 14.6922H22.8716L22.9582 14.0466H21.9976L22.0685 13.5664H23.0527L23.1393 12.9208H21.604L21.1946 15.952H22.8086L22.8952 15.3064H21.8244Z" fill="#25387C"/>
+                                        <path d="M25.21 12.9208H24.5408L24.2259 13.4719C24.1787 13.5585 24.1235 13.653 24.0606 13.7711C24.0133 13.6136 23.9818 13.527 23.9818 13.5113L23.785 12.9208H23.2102L23.6905 14.4088L22.8245 15.952H23.5094L23.785 15.4638C23.848 15.3536 23.9031 15.2591 23.9425 15.1804C23.9661 15.2591 23.9976 15.3536 24.0291 15.4638L24.1865 15.952H24.7928L24.3125 14.519L25.21 12.9208Z" fill="#25387C"/>
+                                        <path d="M26.7453 13.7238C26.7453 13.5585 26.7217 13.4089 26.6744 13.2908C26.6193 13.1648 26.5484 13.0704 26.454 13.0074C26.3595 12.9523 26.2414 12.9208 26.0918 12.9208H25.2651L24.8557 15.952H25.4068L25.5564 14.8576H25.7296C25.9028 14.8576 26.0131 14.8497 26.0839 14.834C26.1942 14.8103 26.2886 14.771 26.3595 14.7237C26.4303 14.6765 26.4933 14.6056 26.5484 14.5112C26.6036 14.4246 26.6508 14.3065 26.6902 14.1569C26.7295 14.0151 26.7453 13.8656 26.7453 13.716V13.7238ZM25.7296 13.5585H25.9265C26.0839 13.5585 26.1233 13.5743 26.1233 13.5743C26.1469 13.5821 26.1627 13.6057 26.1705 13.6294C26.1863 13.6609 26.1942 13.7081 26.1942 13.7632C26.1942 13.8498 26.1784 13.9364 26.1469 14.0151C26.1154 14.086 26.0761 14.1332 26.0209 14.1647C25.9895 14.1805 25.9028 14.212 25.6588 14.212H25.6352L25.7218 13.5506L25.7296 13.5585Z" fill="#25387C"/>
+                                        <path d="M28.2018 14.8891C28.1782 14.8182 28.1467 14.7552 28.1152 14.7001C28.2727 14.645 28.3987 14.5427 28.4853 14.4009C28.5876 14.2277 28.6349 14.0151 28.6349 13.7553C28.6349 13.5743 28.6112 13.4168 28.5561 13.2908C28.501 13.157 28.4223 13.0546 28.3278 12.9995C28.2333 12.9444 28.1152 12.9208 27.9578 12.9208H27.0681L26.6587 15.952H27.2098L27.3673 14.7631H27.446C27.5326 14.7631 27.5641 14.7867 27.572 14.7946C27.6035 14.834 27.6586 14.9206 27.7216 15.1331C27.8161 15.4717 27.879 15.7236 27.9105 15.8811L27.9263 15.9441H28.5089L28.4853 15.8417C28.3829 15.4323 28.2806 15.1095 28.2018 14.8812V14.8891ZM27.5326 13.5664H27.879C28.0129 13.5664 28.0365 13.59 28.0365 13.59C28.0759 13.6294 28.0916 13.6845 28.0916 13.7632C28.0916 13.8419 28.0759 13.9128 28.0444 13.9837C28.0129 14.0466 27.9735 14.0939 27.9184 14.1254C27.8869 14.1411 27.8003 14.1726 27.5562 14.1726H27.446L27.5247 13.5664H27.5326Z" fill="#25387C"/>
+                                        <path d="M30.2883 14.6922L30.3749 14.0466H29.4222L29.4852 13.5664H30.4772L30.5638 12.9208H29.0207L28.6191 15.952H30.2253L30.3119 15.3064H29.2411L29.3356 14.6922H30.2883Z" fill="#25387B"/>
+                                        <path d="M31.4376 13.5034C31.5163 13.5034 31.5714 13.527 31.6108 13.5821C31.658 13.6451 31.6816 13.7317 31.6895 13.8498L31.6974 13.9364L32.2249 13.897V13.8183C32.2091 13.5428 32.1383 13.3144 32.0123 13.1412C31.8785 12.9601 31.6816 12.8735 31.4455 12.8735C31.2014 12.8735 31.0203 12.968 30.8865 13.1491C30.7605 13.3223 30.7054 13.5428 30.7054 13.7947C30.7054 13.9443 30.729 14.0703 30.7684 14.1884C30.8077 14.3065 30.8707 14.4009 30.9416 14.4718C31.0124 14.5427 31.1148 14.6214 31.2644 14.7237C31.4376 14.8418 31.4927 14.8969 31.5084 14.9127C31.5399 14.9599 31.5557 15.0072 31.5557 15.078C31.5557 15.1568 31.5321 15.2197 31.4927 15.2749C31.4533 15.3221 31.3825 15.3457 31.288 15.3457C31.1305 15.3457 31.0754 15.2827 31.0518 15.2355C31.036 15.204 31.0124 15.1253 31.0046 14.9127V14.8261L30.4771 14.8655V14.9442C30.4771 15.141 30.5007 15.3221 30.5479 15.4796C30.603 15.6449 30.6975 15.7709 30.8235 15.8653C30.9573 15.9598 31.1069 16.0071 31.288 16.0071C31.5478 16.0071 31.7525 15.9047 31.8942 15.7C32.0359 15.5111 32.1068 15.2749 32.1068 15.0072C32.1068 14.7867 32.0596 14.6056 31.9651 14.456C31.9021 14.3537 31.7604 14.2356 31.5321 14.086C31.3667 13.9758 31.3037 13.9128 31.2801 13.8813C31.2486 13.8419 31.2329 13.7947 31.2329 13.7317C31.2329 13.6609 31.2486 13.6057 31.2801 13.5664C31.3116 13.527 31.3588 13.5113 31.4376 13.5113V13.5034Z" fill="#25387C"/>
+                                        <path d="M33.3035 14.086C33.1382 13.9758 33.0752 13.9128 33.0516 13.8813C33.0201 13.8419 33.0044 13.7947 33.0044 13.7317C33.0044 13.6609 33.0201 13.6057 33.0516 13.5664C33.0831 13.527 33.1303 13.5113 33.2091 13.5113C33.2878 13.5113 33.3429 13.5349 33.3823 13.59C33.4295 13.653 33.4531 13.7396 33.461 13.8577L33.4689 13.9443L33.9964 13.9049V13.8262C33.9806 13.5506 33.9098 13.3223 33.7838 13.1491C33.65 12.968 33.4531 12.8814 33.2169 12.8814C32.9729 12.8814 32.7918 12.9759 32.6579 13.157C32.532 13.3302 32.4769 13.5506 32.4769 13.8026C32.4769 13.9522 32.5005 14.0781 32.5398 14.1962C32.5792 14.3143 32.6422 14.4088 32.7131 14.4797C32.7839 14.5505 32.8863 14.6293 33.0359 14.7316C33.2091 14.8497 33.2642 14.9048 33.2799 14.9206C33.3114 14.9678 33.3272 15.015 33.3272 15.0859C33.3272 15.1646 33.3035 15.2276 33.2642 15.2827C33.2248 15.33 33.1618 15.3536 33.0595 15.3536C32.902 15.3536 32.8469 15.2906 32.8233 15.2434C32.8075 15.2119 32.7839 15.1331 32.776 14.9206V14.834L32.2485 14.8733V14.9521C32.2485 15.1489 32.2722 15.33 32.3194 15.4874C32.3745 15.6528 32.469 15.7787 32.595 15.8732C32.7288 15.9677 32.8784 16.0149 33.0595 16.0149C33.3193 16.0149 33.524 15.9126 33.6657 15.7079C33.8074 15.5189 33.8783 15.2827 33.8783 15.015C33.8783 14.7946 33.831 14.6135 33.7366 14.4639C33.6736 14.3616 33.5319 14.2435 33.3114 14.0939L33.3035 14.086Z" fill="#25387C"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect width="38.3031" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>                                        
+                                </div>
+                              <span class="ml-3 block truncate">
+                                JNE Regular - Rp 24.000
+                              </span>
+                            </span>
+                            <span class="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                              <!-- Heroicon name: solid/selector -->
+                              <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                              </svg>
+                            </span>
+                          </button>
+                      
+                          <!--
+                            Select popover, show/hide based on select state.
+                      
+                            Entering: ""
+                              From: ""
+                              To: ""
+                            Leaving: "transition ease-in duration-100"
+                              From: "opacity-100"
+                              To: "opacity-0"
+                          -->
+                          <ul x-bind:class="{hidden:show}" class="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-56 py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm" tabindex="-1" role="listbox" aria-labelledby="listbox-label" aria-activedescendant="listbox-option-3">
+                            <!--
+                              Select option, manage highlight styles based on mouseenter/mouseleave and keyboard navigation.
+                      
+                              Highlighted: "text-white bg-indigo-600", Not Highlighted: "text-gray-900"
+                            -->
+                            <li class="text-gray-900 cursor-default select-none relative py-2 pl-3 pr-9" id="listbox-option-0" role="option">
+                              <div class="flex items-center">
+                                <div class="flex-shrink-0 flex items-center h-6 w-6">
+                                    <svg width="39" height="16" viewBox="0 0 39 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M25.2178 11.4878L27.627 0.000854492H36.626L36.0277 2.87457H31.5242L31.225 4.30749H35.0514L34.4452 7.1812H30.6188L30.3196 8.622H34.8231L34.2168 11.4878H25.2178Z" fill="#25387B"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 11.4879C8.00704 7.66151 18.8405 5.21295 28.7293 4.30754C31.3983 4.06347 34.0437 3.92175 37.7283 3.92175C37.87 3.92175 38.1141 3.87451 38.3031 3.82727L37.563 7.37021C37.5236 7.55916 37.2008 7.65364 36.9646 7.65364C14.3843 7.65364 0.866051 11.48 0.866051 11.48H0.00787319L0 11.4879Z" fill="#DF2128"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1248 11.4878L14.534 0.000854492H18.8406L21.4072 5.22078L22.5016 0.000854492H26.8083L24.3991 11.4878H20.0924L17.5651 6.07896L16.4314 11.4878H12.1248Z" fill="#25387B"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00708 6.70094L9.40851 0.000854492H13.7151L12.0303 8.04725C11.5107 10.5352 9.57384 11.4957 6.99931 11.4957H3.82642L4.55075 8.04725H5.98367C7.03868 8.04725 7.80238 7.66147 7.99921 6.70881L8.00708 6.70094Z" fill="#25387B"/>
+                                        <path d="M21.8244 15.3064L21.911 14.6922H22.8716L22.9582 14.0466H21.9976L22.0685 13.5664H23.0527L23.1393 12.9208H21.604L21.1946 15.952H22.8086L22.8952 15.3064H21.8244Z" fill="#25387C"/>
+                                        <path d="M25.21 12.9208H24.5408L24.2259 13.4719C24.1787 13.5585 24.1235 13.653 24.0606 13.7711C24.0133 13.6136 23.9818 13.527 23.9818 13.5113L23.785 12.9208H23.2102L23.6905 14.4088L22.8245 15.952H23.5094L23.785 15.4638C23.848 15.3536 23.9031 15.2591 23.9425 15.1804C23.9661 15.2591 23.9976 15.3536 24.0291 15.4638L24.1865 15.952H24.7928L24.3125 14.519L25.21 12.9208Z" fill="#25387C"/>
+                                        <path d="M26.7453 13.7238C26.7453 13.5585 26.7217 13.4089 26.6744 13.2908C26.6193 13.1648 26.5484 13.0704 26.454 13.0074C26.3595 12.9523 26.2414 12.9208 26.0918 12.9208H25.2651L24.8557 15.952H25.4068L25.5564 14.8576H25.7296C25.9028 14.8576 26.0131 14.8497 26.0839 14.834C26.1942 14.8103 26.2886 14.771 26.3595 14.7237C26.4303 14.6765 26.4933 14.6056 26.5484 14.5112C26.6036 14.4246 26.6508 14.3065 26.6902 14.1569C26.7295 14.0151 26.7453 13.8656 26.7453 13.716V13.7238ZM25.7296 13.5585H25.9265C26.0839 13.5585 26.1233 13.5743 26.1233 13.5743C26.1469 13.5821 26.1627 13.6057 26.1705 13.6294C26.1863 13.6609 26.1942 13.7081 26.1942 13.7632C26.1942 13.8498 26.1784 13.9364 26.1469 14.0151C26.1154 14.086 26.0761 14.1332 26.0209 14.1647C25.9895 14.1805 25.9028 14.212 25.6588 14.212H25.6352L25.7218 13.5506L25.7296 13.5585Z" fill="#25387C"/>
+                                        <path d="M28.2018 14.8891C28.1782 14.8182 28.1467 14.7552 28.1152 14.7001C28.2727 14.645 28.3987 14.5427 28.4853 14.4009C28.5876 14.2277 28.6349 14.0151 28.6349 13.7553C28.6349 13.5743 28.6112 13.4168 28.5561 13.2908C28.501 13.157 28.4223 13.0546 28.3278 12.9995C28.2333 12.9444 28.1152 12.9208 27.9578 12.9208H27.0681L26.6587 15.952H27.2098L27.3673 14.7631H27.446C27.5326 14.7631 27.5641 14.7867 27.572 14.7946C27.6035 14.834 27.6586 14.9206 27.7216 15.1331C27.8161 15.4717 27.879 15.7236 27.9105 15.8811L27.9263 15.9441H28.5089L28.4853 15.8417C28.3829 15.4323 28.2806 15.1095 28.2018 14.8812V14.8891ZM27.5326 13.5664H27.879C28.0129 13.5664 28.0365 13.59 28.0365 13.59C28.0759 13.6294 28.0916 13.6845 28.0916 13.7632C28.0916 13.8419 28.0759 13.9128 28.0444 13.9837C28.0129 14.0466 27.9735 14.0939 27.9184 14.1254C27.8869 14.1411 27.8003 14.1726 27.5562 14.1726H27.446L27.5247 13.5664H27.5326Z" fill="#25387C"/>
+                                        <path d="M30.2883 14.6922L30.3749 14.0466H29.4222L29.4852 13.5664H30.4772L30.5638 12.9208H29.0207L28.6191 15.952H30.2253L30.3119 15.3064H29.2411L29.3356 14.6922H30.2883Z" fill="#25387B"/>
+                                        <path d="M31.4376 13.5034C31.5163 13.5034 31.5714 13.527 31.6108 13.5821C31.658 13.6451 31.6816 13.7317 31.6895 13.8498L31.6974 13.9364L32.2249 13.897V13.8183C32.2091 13.5428 32.1383 13.3144 32.0123 13.1412C31.8785 12.9601 31.6816 12.8735 31.4455 12.8735C31.2014 12.8735 31.0203 12.968 30.8865 13.1491C30.7605 13.3223 30.7054 13.5428 30.7054 13.7947C30.7054 13.9443 30.729 14.0703 30.7684 14.1884C30.8077 14.3065 30.8707 14.4009 30.9416 14.4718C31.0124 14.5427 31.1148 14.6214 31.2644 14.7237C31.4376 14.8418 31.4927 14.8969 31.5084 14.9127C31.5399 14.9599 31.5557 15.0072 31.5557 15.078C31.5557 15.1568 31.5321 15.2197 31.4927 15.2749C31.4533 15.3221 31.3825 15.3457 31.288 15.3457C31.1305 15.3457 31.0754 15.2827 31.0518 15.2355C31.036 15.204 31.0124 15.1253 31.0046 14.9127V14.8261L30.4771 14.8655V14.9442C30.4771 15.141 30.5007 15.3221 30.5479 15.4796C30.603 15.6449 30.6975 15.7709 30.8235 15.8653C30.9573 15.9598 31.1069 16.0071 31.288 16.0071C31.5478 16.0071 31.7525 15.9047 31.8942 15.7C32.0359 15.5111 32.1068 15.2749 32.1068 15.0072C32.1068 14.7867 32.0596 14.6056 31.9651 14.456C31.9021 14.3537 31.7604 14.2356 31.5321 14.086C31.3667 13.9758 31.3037 13.9128 31.2801 13.8813C31.2486 13.8419 31.2329 13.7947 31.2329 13.7317C31.2329 13.6609 31.2486 13.6057 31.2801 13.5664C31.3116 13.527 31.3588 13.5113 31.4376 13.5113V13.5034Z" fill="#25387C"/>
+                                        <path d="M33.3035 14.086C33.1382 13.9758 33.0752 13.9128 33.0516 13.8813C33.0201 13.8419 33.0044 13.7947 33.0044 13.7317C33.0044 13.6609 33.0201 13.6057 33.0516 13.5664C33.0831 13.527 33.1303 13.5113 33.2091 13.5113C33.2878 13.5113 33.3429 13.5349 33.3823 13.59C33.4295 13.653 33.4531 13.7396 33.461 13.8577L33.4689 13.9443L33.9964 13.9049V13.8262C33.9806 13.5506 33.9098 13.3223 33.7838 13.1491C33.65 12.968 33.4531 12.8814 33.2169 12.8814C32.9729 12.8814 32.7918 12.9759 32.6579 13.157C32.532 13.3302 32.4769 13.5506 32.4769 13.8026C32.4769 13.9522 32.5005 14.0781 32.5398 14.1962C32.5792 14.3143 32.6422 14.4088 32.7131 14.4797C32.7839 14.5505 32.8863 14.6293 33.0359 14.7316C33.2091 14.8497 33.2642 14.9048 33.2799 14.9206C33.3114 14.9678 33.3272 15.015 33.3272 15.0859C33.3272 15.1646 33.3035 15.2276 33.2642 15.2827C33.2248 15.33 33.1618 15.3536 33.0595 15.3536C32.902 15.3536 32.8469 15.2906 32.8233 15.2434C32.8075 15.2119 32.7839 15.1331 32.776 14.9206V14.834L32.2485 14.8733V14.9521C32.2485 15.1489 32.2722 15.33 32.3194 15.4874C32.3745 15.6528 32.469 15.7787 32.595 15.8732C32.7288 15.9677 32.8784 16.0149 33.0595 16.0149C33.3193 16.0149 33.524 15.9126 33.6657 15.7079C33.8074 15.5189 33.8783 15.2827 33.8783 15.015C33.8783 14.7946 33.831 14.6135 33.7366 14.4639C33.6736 14.3616 33.5319 14.2435 33.3114 14.0939L33.3035 14.086Z" fill="#25387C"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect width="38.3031" height="16" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>                                        
+                                </div>
+                                <!-- Selected: "font-semibold", Not Selected: "font-normal" -->
+                                <span class="font-normal ml-3 block truncate">
+                                    JNE Yes - Rp 24.000
+                                </span>
+                              </div>
+                      
+                              <!--
+                                Checkmark, only display for selected option.
+                      
+                                Highlighted: "text-white", Not Highlighted: "text-indigo-600"
+                              -->
+                              <span class="text-indigo-600 absolute inset-y-0 right-0 flex items-center pr-4">
+                                <!-- Heroicon name: solid/check -->
+                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                              </span>
+                            </li>
+                      
+                            <!-- More items... -->
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <label class="block text-sm font-semibold" for="">VOUCHER</label>
+                        <div class="flex space-x-4">
+                            <input class="w-full" placeholder="VOUCHER CODE" type="text">
+                            <button class="text-sm border-2 border-blue-400 text-blue-400 py-2 px-3">Apply</button>
+                        </div>
+                    </div>
+                    <hr class="divider">
+                    <h6 class="flex my-8 text-sm font-semibold justify-between">
+                        <span>TOTAL COST</span>
+                        <span>Rp 163.000</span>
+                    </h6>
+                    <button class="flex-shrink-0 block w-full bg-blue-400 text-white text-base font-semibold py-2 px-4 shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500" type="button">
+                        Checkout
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="my-8">
+            <h3 class="title">Your Wishlist</h3>
+        </div>
+        <div class="grids">
+            <div class="item xs-3">
+                {{partial "addproduct.html" (dict "img" "/img/product-8.png" "title" "Collar Shirt")}}
+            </div>
+            <div class="item xs-3">
+                {{partial "addproduct.html" (dict "img" "/img/product-7.png" "title" "T-Shirt Yellow Rainbowt")}}
+            </div>
+            <div class="item xs-3">
+                {{partial "addproduct.html" (dict "img" "/img/product-6.png" "title" "Black Shark T-Shirt")}}
+            </div>
+            <div class="item xs-3">
+                {{partial "addproduct.html" (dict "img" "/img/product-5.png" "title" "T-Shirt Fair Dark Grey")}}
+            </div>
+        </div>
+        <div class="my-8">
+            <h3 class="title">Other Products You May Like</h3>
+        </div>
+        <div class="grids">
+            <div class="item xs-3">
+                {{ partial "product.html" (dict "img" "/img/product-2.png" "title" "Coolman T-Shirt") }}
+            </div>
+            <div class="item xs-3">
+                {{ partial "product.html" (dict "img" "/img/product-3.png" "title" "Unisex T-Shirt Grey") }}
+            </div>
+            <div class="item xs-3">
+                {{ partial "product.html" (dict "img" "/img/product-4.png" "title" "T-Shirt White Shortrange") }}
+            </div>
+            <div class="item xs-3">
+                {{ partial "product.html" (dict "img" "/img/product-5.png" "title" "T-Shirt Fair Dark Grey") }}
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}
+{{ define "footer" }}
+    {{ partial "footer.html" . }}
+{{ end }}
